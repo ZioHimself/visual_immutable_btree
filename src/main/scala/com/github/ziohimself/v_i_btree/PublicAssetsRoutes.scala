@@ -15,12 +15,15 @@ class PublicAssetsRoutes()(implicit val system: ActorSystem[_]) {
 
 
   //#all-routes
-  val publicRoutes: Route = (
+  val publicRoutes: Route =
     pathPrefix("public") {
       concat(
         getFromDirectory("src/main/resources/public"),
         getFromDirectory("target/public")
       )
+    } ~
+    path("favicon.ico") {
+      getFromResource("public/favicon.ico")
     } ~
     pathSingleSlash {
       get {
@@ -32,6 +35,5 @@ class PublicAssetsRoutes()(implicit val system: ActorSystem[_]) {
         )
       }
     }
-  )
   //#all-routes
 }
