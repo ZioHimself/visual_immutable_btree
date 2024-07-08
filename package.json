@@ -1,0 +1,17 @@
+{
+  "name": "visual_immutable_btree",
+  "version": "1.0.0",
+  "description": "This is a visualization for immutable tree operation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "echo \"Running webpack\" && webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^5.92.1",
+    "webpack-cli": "^5.1.4"
+  }
+}
